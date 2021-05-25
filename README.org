@@ -1,1 +1,49 @@
 #+TITLE: this is number guessing game
+#+PROPERTY: header-args :tangle game.py
+#+STARTUP: showeverything
+* Table of contents :toc:
+
+* importing all of the functions
+#+begin_src python
+# !/usr/bin/env python3
+# Hiya this is a program to guess and win
+import random
+import math
+#+end_src
+
+#+RESULTS:
+: None
+
+* Inputing of the lower limit
+#+begin_src python
+ll=int(input("Enter the lower limit "))
+#+end_src
+
+* Inputing of the upper limit
+#+begin_src python
+ul=int(input("Enter the upper limit "))
+#+end_src
+* now creating a random number
+#+begin_src python
+random=random.randint(ll,ul)
+print(f'\n you have  got {round(math.log(ul - ll + 1 , 2))} number of chances to guess the correct number!')
+#+end_src
+* printing and calculating the number of chances
+#+begin_src python
+count=0
+while count<math.log(ul-ll+1,2):
+   count+=1
+   guess=int(input("Enter your guess! "))
+   if random == guess:
+          print(f"Congratulations you have guessed the correct answer in {count} guesses")
+          break
+   elif random<guess:
+      print(f"youre guess is too low guess again :) ")
+   elif random>guess:
+      print(f"youre guess is too high guess again :) ")
+#+end_src
+* Game over
+#+begin_src python
+if count>=math.log(ul-ll+1,2):
+    print(f"The number is {random} better luck next time")
+#+end_src
