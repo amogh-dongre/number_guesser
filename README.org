@@ -2,7 +2,15 @@
 #+PROPERTY: header-args :tangle game.py
 #+STARTUP:  showeverything
 #+OPTIONS:  toc:nil
-* importing all of the functions
+* Table of contents :toc:
+- [[#importing-all-of-the-functions][Importing all of the functions]]
+- [[#inputing-of-the-lower-limit][Inputing of the lower limit]]
+- [[#inputing-of-the-upper-limit][Inputing of the upper limit]]
+- [[#now-creating-a-random-number][Now creating a random number]]
+- [[#printing-and-calculating-the-number-of-chances][Printing and calculating the number of chances]]
+- [[#game-over][Game over]]
+
+* Importing all of the functions
 #+begin_src python
 # !/usr/bin/env python3
 # Hiya this is a program to guess and win
@@ -22,12 +30,12 @@ ll=int(input("Enter the lower limit "))
 #+begin_src python
 ul=int(input("Enter the upper limit "))
 #+end_src
-* now creating a random number
+* Now creating a random number
 #+begin_src python
 random=random.randint(ll,ul)
 print(f'\n you have  got {round(math.log(ul - ll + 1 , 2))} number of chances to guess the correct number!')
 #+end_src
-* printing and calculating the number of chances
+* Printing and calculating the number of chances
 #+begin_src python
 count=0
 while count<math.log(ul-ll+1,2):
