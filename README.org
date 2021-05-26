@@ -1,7 +1,7 @@
 #+TITLE: this is number guessing game
 #+PROPERTY: header-args :tangle game.py
-#+STARTUP: showeverything
-
+#+STARTUP:  showeverything
+#+OPTIONS:  toc:nil
 * importing all of the functions
 #+begin_src python
 # !/usr/bin/env python3
