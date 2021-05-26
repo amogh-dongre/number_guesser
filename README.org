@@ -1,7 +1,6 @@
 #+TITLE: this is number guessing game
 #+PROPERTY: header-args :tangle game.py
 #+STARTUP: showeverything
-* Table of contents :toc:
 
 * importing all of the functions
 #+begin_src python
